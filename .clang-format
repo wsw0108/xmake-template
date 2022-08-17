@@ -1,0 +1,24 @@
+---
+Language:      Cpp
+BasedOnStyle:  LLVM
+# Force pointers to the type for C++.
+DerivePointerAlignment: false
+PointerAlignment: Left
+ColumnLimit: 0
+IndentWidth: 4
+AccessModifierOffset: -4
+SortIncludes: true
+IncludeBlocks: Regroup
+IncludeCategories:
+  # Headers in <> without extension.
+  - Regex:           '<([A-Za-z0-9\Q/-_\E])+>'
+    Priority:        4
+  # Headers in <> from specific external libraries.
+  - Regex:           '<(gflags|fmt)\/'
+    Priority:        3
+  # Headers in <> with extension.
+  - Regex:           '<([A-Za-z0-9.\Q/-_\E])+>'
+    Priority:        2
+  # Headers in "" with extension.
+  - Regex:           '"([A-Za-z0-9.\Q/-_\E])+"'
+    Priority:        1

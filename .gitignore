@@ -1,0 +1,16 @@
+# Xmake cache
+.xmake/
+build/
+
+# MacOS Cache
+.DS_Store
+
+# `xmake project -k compile_commands`
+compile_commands.json
+
+.vscode/
+vs2019
+vsxmake2019
+
+# `xmake install -o dist -a`
+dist/
