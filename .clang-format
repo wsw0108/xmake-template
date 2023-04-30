@@ -6,6 +6,7 @@ DerivePointerAlignment: false
 PointerAlignment: Left
 ColumnLimit: 0
 IndentWidth: 4
+IndentCaseLabels: true
 AccessModifierOffset: -4
 SortIncludes: true
 IncludeBlocks: Regroup
@@ -14,7 +15,7 @@ IncludeCategories:
   - Regex:           '<([A-Za-z0-9\Q/-_\E])+>'
     Priority:        4
   # Headers in <> from specific external libraries.
-  - Regex:           '<(gflags|fmt)\/'
+  - Regex:           '<(argparse|fmt)\/'
     Priority:        3
   # Headers in <> with extension.
   - Regex:           '<([A-Za-z0-9.\Q/-_\E])+>'
